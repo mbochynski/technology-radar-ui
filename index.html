@@ -1,30 +1,10 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>technology-radar-ui</title><link rel=icon type=image/png sizes=32x32 href=/technology-radar-ui/static/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/technology-radar-ui/static/img/icons/favicon-16x16.png><link rel=stylesheet href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"><link rel=stylesheet href="//fonts.googleapis.com/icon?family=Material+Icons"><link rel=stylesheet href=/technology-radar-ui/static/vue-material.css><!--[if IE]><link rel="shortcut icon" href="/technology-radar-ui/static/img/icons/favicon.ico"><![endif]--><link rel=manifest href=/technology-radar-ui/static/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=technology-radar-ui><link rel=apple-touch-icon href=/technology-radar-ui/static/img/icons/apple-touch-icon-152x152.png><meta name=msapplication-TileImage content=/technology-radar-ui/static/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000><link rel=preload href=/technology-radar-ui/static/js/vendor.b902b9018ecaab2e584d.js as=script><link rel=preload href=/technology-radar-ui/static/js/app.5018c300375b3311b59f.js as=script><link rel=preload href=/technology-radar-ui/static/css/app.8ef90f663768b48850cd1cccd6170503.css as=style><link rel=preload href=/technology-radar-ui/static/js/manifest.01b1710d922e9d4aff65.js as=script><script type=text/javascript>// Single Page Apps for GitHub Pages
-      // https://github.com/rafrex/spa-github-pages
-      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-      // ----------------------------------------------------------------------
-      // This script checks to see if a redirect is present in the query string
-      // and converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function(l) {
-        if (l.search) {
-          var q = {};
-          l.search.slice(1).split('&').forEach(function(v) {
-            var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-          });
-          if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + (q.p || '') +
-              (q.q ? ('?' + q.q) : '') +
-              l.hash
-            );
-          }
-        }
-      }(window.location))</script><link href=/technology-radar-ui/static/css/app.8ef90f663768b48850cd1cccd6170503.css rel=stylesheet></head><body><div id=app>This is your fallback content in case JavaScript fails to load.</div><script>(function() {
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>technology-radar-ui</title><link rel=icon type=image/png sizes=32x32 href=/technology-radar-ui/static/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/technology-radar-ui/static/img/icons/favicon-16x16.png><link rel=stylesheet href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"><link rel=stylesheet href="//fonts.googleapis.com/icon?family=Material+Icons"><link rel=stylesheet href=/technology-radar-ui/static/vue-material.css><!--[if IE]><link rel="shortcut icon" href="/technology-radar-ui/static/img/icons/favicon.ico"><![endif]--><link rel=manifest href=/technology-radar-ui/static/manifest.json><meta name=theme-color content=#F57C00><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=technology-radar-ui><link rel=apple-touch-icon href=/technology-radar-ui/static/img/icons/apple-touch-icon-152x152.png><meta name=msapplication-TileImage content=/technology-radar-ui/static/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000><link rel=preload href=/technology-radar-ui/static/js/vendor.b902b9018ecaab2e584d.js as=script><link rel=preload href=/technology-radar-ui/static/js/app.5018c300375b3311b59f.js as=script><link rel=preload href=/technology-radar-ui/static/css/app.8ef90f663768b48850cd1cccd6170503.css as=style><link rel=preload href=/technology-radar-ui/static/js/manifest.01b1710d922e9d4aff65.js as=script><link href=/technology-radar-ui/static/css/app.8ef90f663768b48850cd1cccd6170503.css rel=stylesheet></head><body><script>(function() {
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();</script><div id=app></div><script>(function() {
   'use strict';
 
   // Check to make sure service workers are supported in the current browser,
